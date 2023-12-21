@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import MyButton from "./MyButton/MyButton";
 import MyInput from "./MyInput/MyInput";
 import "./style/style.css";
+import TodoList from "./Todo/TodoList";
+import Title from "./Header/Header";
 
 export const App = () => (
   <div>
@@ -10,6 +12,8 @@ export const App = () => (
       Нажми меня
     </MyButton>
     <MyInput placeholder="Enter text ..." label="input" big={false} />
+    <TodoList></TodoList>
+    <Title level={1}>Title</Title>
   </div>
 );
 
@@ -18,5 +22,3 @@ if (rootElement) {
   const root = createRoot(rootElement);
   root.render(<App />);
 }
-
-export { MyButton, MyInput };
