@@ -20,7 +20,8 @@ const MyButton: FC<MyButtonProps> = (
 		rootClasses.push('big-btn');
 	}
 	return (
-		<button {...props} className={rootClasses.join(' ')} style={{ color, ...(big ? { fontSize: '20px' } : {}) }}>
+		<button {...props} className={rootClasses.join(' ')}
+			style={{ color, ...(big ? { fontSize: '20px' } : {}) }}>
 			{children}
 		</button>
 	);
