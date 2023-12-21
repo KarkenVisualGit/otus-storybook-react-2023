@@ -5,6 +5,7 @@ import MyInput from "./MyInput/MyInput";
 import "./style/style.css";
 import TodoList from "./Todo/TodoList";
 import Title from "./Header/Header";
+import { Paragraph } from "./Paragraph/Paragraph";
 
 export const App = () => (
   <div>
@@ -14,6 +15,15 @@ export const App = () => (
     <MyInput placeholder="Enter text ..." label="input" big={false} />
     <TodoList></TodoList>
     <Title level={1}>Title</Title>
+    <Paragraph
+      fontSize="16px"
+      fontWeight="bold"
+      textAlign="center"
+      color="gray"
+      className="paragraph_element"
+    >
+      Это пример параграфа c заданными стилями.
+    </Paragraph>
   </div>
 );
 
