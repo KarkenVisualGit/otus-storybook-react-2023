@@ -35,6 +35,7 @@ export const CustomStyleParagraph: Story = {
   args: {
     fontSize: "20px",
     textAlign: "center",
+    fontFamily: "'Lucida Console', 'Courier New', monospace",
     children: "Это параграф c настраиваемым стилем.",
   },
 };

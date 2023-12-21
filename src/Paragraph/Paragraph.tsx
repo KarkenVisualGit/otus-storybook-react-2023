@@ -8,6 +8,7 @@ export interface MyParagraphProps {
   className?: string;
   style?: React.CSSProperties;
   children: ReactNode;
+  fontFamily?: string;
 }
 
 export const Paragraph: FC<MyParagraphProps> = ({
@@ -18,12 +19,14 @@ export const Paragraph: FC<MyParagraphProps> = ({
   textAlign,
   className,
   style,
+  fontFamily,
 }) => {
   const paragraphStyle: React.CSSProperties = {
     fontSize,
     fontWeight,
     color,
     textAlign,
+    fontFamily,
     ...style,
   };
 

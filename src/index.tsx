@@ -6,6 +6,7 @@ import "./style/style.css";
 import TodoList from "./Todo/TodoList";
 import Title from "./Header/Header";
 import { Paragraph } from "./Paragraph/Paragraph";
+import { Spacer } from "./Spacer/Spacer";
 
 export const App = () => (
   <div>
@@ -21,9 +22,11 @@ export const App = () => (
       textAlign="center"
       color="gray"
       className="paragraph_element"
+      fontFamily="'Lucida Console', 'Courier New', monospace"
     >
       Это пример параграфа c заданными стилями.
     </Paragraph>
+    <Spacer height="10px" color="Tomato" />
   </div>
 );
 
