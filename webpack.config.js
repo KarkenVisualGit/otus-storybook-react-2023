@@ -8,7 +8,7 @@ module.exports = {
   },
   devtool: "source-map",
   output: {
-    filename: "[name].[hash:8].js",
+    filename: "[name].[contenthash:8].js",
     path: path.resolve(__dirname, "./dist"),
     clean: true,
   },
@@ -32,6 +32,13 @@ module.exports = {
       {
         test: /\.html$/,
         use: "html-loader",
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg|webp)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name]-[contenthash][ext]",
+        },
       },
     ],
   },

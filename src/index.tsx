@@ -3,11 +3,11 @@ import { createRoot } from "react-dom/client";
 import MyButton from "./MyButton/MyButton";
 import MyInput from "./MyInput/MyInput";
 import "./style/style.css";
-import TodoList from "./Todo/TodoList";
 import Title from "./Header/Header";
 import { Paragraph } from "./Paragraph/Paragraph";
 import { Spacer } from "./Spacer/Spacer";
 import Collapsible from "./Collapsible/Collapsible";
+import Image from "./Image/Image";
 
 export const App = () => (
   <div>
@@ -15,7 +15,6 @@ export const App = () => (
       Нажми меня
     </MyButton>
     <MyInput placeholder="Enter text ..." label="input" big={false} />
-    <TodoList></TodoList>
     <Title level={1}>Title</Title>
     <Paragraph
       fontSize="16px"
@@ -37,6 +36,12 @@ export const App = () => (
     >
       <p>Содержимое схлопывающегося блока</p>
     </Collapsible>
+    <Image
+      src={require("./images/tree_on_the_car.jpg")}
+      alt="Последствие торнадо"
+      width="600px"
+      height="400px"
+    />
   </div>
 );
 
