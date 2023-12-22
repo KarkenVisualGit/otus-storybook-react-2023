@@ -12,6 +12,8 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "test:loki": "npx loki test",
+    "update:loki": "npx loki update",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -56,6 +58,7 @@
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.0",
+    "loki": "^0.33.1",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.1.1",
     "react": "^18.2.0",
@@ -73,5 +76,20 @@
   "lint-staged": {
     "*.{js, ts}": "eslint --fix",
     "*.{js,ts,css,md}": "prettier --write"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

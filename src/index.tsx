@@ -10,7 +10,7 @@ import Collapsible from "./Collapsible/Collapsible";
 import Image from "./Image/Image";
 
 export const App = () => (
-  <div>
+  <section>
     <MyButton color="blue" big={false}>
       Нажми меня
     </MyButton>
@@ -42,7 +42,7 @@ export const App = () => (
       width="600px"
       height="400px"
     />
-  </div>
+  </section>
 );
 
 export const rootElement = document.getElementById("root");
