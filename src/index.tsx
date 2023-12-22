@@ -7,6 +7,7 @@ import TodoList from "./Todo/TodoList";
 import Title from "./Header/Header";
 import { Paragraph } from "./Paragraph/Paragraph";
 import { Spacer } from "./Spacer/Spacer";
+import Collapsible from "./Collapsible/Collapsible";
 
 export const App = () => (
   <div>
@@ -27,6 +28,15 @@ export const App = () => (
       Это пример параграфа c заданными стилями.
     </Paragraph>
     <Spacer height="10px" color="Tomato" />
+    <Collapsible
+      title="Нажмите, чтобы раскрыть"
+      titleColor="blue"
+      titleFontSize="18px"
+      contentFontSize="16px"
+      contentFontFamily="'Lucida Console', 'Courier New', monospace"
+    >
+      <p>Содержимое схлопывающегося блока</p>
+    </Collapsible>
   </div>
 );
 
