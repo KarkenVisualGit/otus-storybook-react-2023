@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: mshick/add-pr-comment@v1
         env:
-          token: ${{ secrets.CHROMATIC_TOKEN }}
+          CHROMATIC_TOKEN: ${{ secrets.CHROMATIC_TOKEN }}
         with:
           message: |
             You can check this code in chromatic with the link
