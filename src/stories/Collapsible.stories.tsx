@@ -1,5 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+// eslint-disable-next-line import/no-named-as-default
 import Collapsible from "../Collapsible/Collapsible";
 
 const meta: Meta<typeof Collapsible> = {

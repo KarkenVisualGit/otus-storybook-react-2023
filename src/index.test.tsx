@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { App } from "./index";
 import "@testing-library/jest-dom";
 import { createRoot } from "react-dom/client";
 import { act } from "react-dom/test-utils";
+import { App } from "./index";
 
 test("renders learn react link", async () => {
   render(<App />);

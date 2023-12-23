@@ -1,4 +1,5 @@
 import "@testing-library/jest-dom";
+import { createRoot } from "react-dom/client";
 
 jest.mock("react-dom/client", () => {
   const root = {
@@ -16,10 +17,6 @@ describe("index.tsx", () => {
     const div = document.createElement("div");
     div.id = "root";
     document.body.appendChild(div);
-
-    require("./index");
-
-    const { createRoot } = require("react-dom/client");
 
     expect(createRoot).toHaveBeenCalledWith(div);
 

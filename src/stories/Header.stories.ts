@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+// eslint-disable-next-line import/no-named-as-default
 import Title from "../Header/Header";
 
 const meta = {
