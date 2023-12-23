@@ -11,8 +11,8 @@ permissions:
   id-token: write
 
 defaults:
- run:
-  working-directory: ./storybook
+  run:
+    working-directory: ./storybook
 
 jobs:
   deploy:

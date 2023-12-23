@@ -1,7 +1,5 @@
 name: Deploy to GitHubPages
 on:
-  push:
-    branches: ["otus-storybook-react"]
   pull_request:
     branches: ["otus-storybook-react"]
 permissions:

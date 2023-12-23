@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🔌
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Npm install 🛒
-        run: npm install --legacy-peer-deps
+        run: npm ci
 
       - name: Deploy to chromatic 🚀
-        uses: chromaui/action@v1
+        uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: mshick/add-pr-comment@v1
         env:
-          CHROMATIC_TOKEN: ${{ secrets.CHROMATIC_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           message: |
             You can check this code in chromatic with the link
