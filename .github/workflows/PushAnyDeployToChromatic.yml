@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: mshick/add-pr-comment@v1
         env:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_TOKEN }}
         with:
           message: |
             You can check this code in chromatic with the link

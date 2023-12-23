@@ -2,12 +2,13 @@ import "@testing-library/jest-dom";
 import { createRoot } from "react-dom/client";
 
 jest.mock("react-dom/client", () => {
+  const originalModule = jest.requireActual("react-dom/client");
   const root = {
     render: jest.fn(),
   };
   return {
     __esModule: true,
-    ...jest.requireActual("react-dom/client"),
+    ...originalModule,
     createRoot: jest.fn(() => root),
   };
 });
@@ -17,6 +18,8 @@ describe("index.tsx", () => {
     const div = document.createElement("div");
     div.id = "root";
     document.body.appendChild(div);
+    // eslint-disable-next-line global-require
+    require("./index");
 
     expect(createRoot).toHaveBeenCalledWith(div);
 
