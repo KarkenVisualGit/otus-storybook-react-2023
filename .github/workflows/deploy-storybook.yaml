@@ -4,6 +4,10 @@ on:
     branches: ["otus-storybook-react"]
 permissions:
   contents: write
+
+defaults:
+  run:
+   working-directory: ./docs
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
