@@ -7,7 +7,7 @@ permissions:
 
 defaults:
   run:
-   working-directory: ./docs
+    working-directory: docs
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
