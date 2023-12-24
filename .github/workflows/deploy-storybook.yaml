@@ -14,7 +14,6 @@ jobs:
 
       - name: Install and Build
         run: |
-          cd docs
           npm ci
           npm run build-storybook
 
