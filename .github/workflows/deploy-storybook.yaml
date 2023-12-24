@@ -1,28 +1,23 @@
-name: Build and Publish storybook to GitHub Pages
-
+name: Storybook
 on:
   push:
     branches:
-      - "otus-storybook-react"
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-defaults:
-  run:
-    working-directory: ./storybook
+      - otus-storybook-react
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.build-publish.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - id: build-publish
-        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.0
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build-storybook
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: storybook-static
-          build_command: npm run build-storybook
+          branch: gh-pages
+          folder: storybook-static
